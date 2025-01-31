@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mời Người Yêu Đi Chơi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trân trọng kính mời người đàn ông em yêu - <span class="highlight"> NY </span></h1>
+            <p>Hãy chọn một gói đi chơi để cùng nhau tận hưởng ngày gặp lại nhé!</p>
+        </header>
+
+        <!-- Đếm ngược -->
+        <div class="countdown">
+            <h2>Thời gian đến ngày hẹn:</h2>
+            <div id="timer">
+                <span id="days"></span> Ngày
+
+                <span id="hours"></span> Giờ
+                <span id="minutes"></span> Phút
+                <span id="seconds"></span> Giây
+            </div>
+        </div>
+
+        <!-- Các gói đi chơi -->
+        <section class="options">
+            <div class="option" id="movie" onclick="selectPackage('Xem Phim', 'movie.jpg')">
+                <h2>Xem Phim</h2>
+                <p>Cùng nhau thưởng thức những bộ phim hay nhất!</p>
+                <button>Chọn Gói</button>
+            </div>
+
+            <div class="option" id="dinner" onclick="selectPackage('Đi Ăn', 'dinner.jpg')">
+                <h2>Đi Ăn</h2>
+                <p>Thưởng thức những món ăn ngon tại nhà hàng yêu thích!</p>
+                <button>Chọn Gói</button>
+            </div>
+        </section>
+
+        <!-- Hiển thị hình ảnh và thông báo -->
+        <div id="dynamicContent">
+            <img id="packageImage" src="" alt="Hình ảnh gói đi chơi" style="display: none;">
+            <p id="selectedPackage"></p>
+        </div>
+
+        <!-- Gửi lời nhắn yêu thương -->
+        <section class="message">
+            <h2>Gửi lời nhắn yêu thương đến Hương </h2>
+            <textarea id="loveMessage" placeholder=" hãy viết lời nhắn của anh gửi em vào đây nhé... "></textarea>
+            <button onclick="sendMessage()">Gửi Lời Nhắn</button>
+            <p id="displayMessage" style="display: none;"></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
